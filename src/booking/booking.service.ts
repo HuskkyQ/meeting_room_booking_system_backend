@@ -125,8 +125,6 @@ export class BookingService {
       },
     );
 
-    console.log(111111);
-
     return {
       bookings: bookings.map((booking) => {
         delete booking.user.password;
@@ -154,6 +152,7 @@ export class BookingService {
     booking.user = user;
     booking.startTime = new Date(bookingDto.startTime);
     booking.endTime = new Date(bookingDto.endTime);
+    booking.note = bookingDto.note;
 
     const res = await this.entityManager.findOneBy(Booking, {
       room: {
