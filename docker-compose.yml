@@ -4,11 +4,11 @@ services:
     build:
       context: ./
       dockerfile: ./Dockerfile
+    ports:
+      - 3005:3005
     depends_on:
       - mysql-container
       - redis-container
-    ports:
-      - 3005:3005
     networks:
       - common-network
   mysql-container:
