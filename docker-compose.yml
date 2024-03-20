@@ -15,7 +15,6 @@ services:
     image: mysql
     volumes:
       - /Users/sevan/wsf/nest/mysql:/var/lib/mysql
-    command: --default-authentication-plugin=mysql_native_password
     environment:
       MYSQL_DATABASE: meeting_room_booking_system
       MYSQL_ROOT_PASSWORD: 123456
